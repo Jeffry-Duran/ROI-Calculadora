@@ -1,0 +1,79 @@
+.gradient-bg {
+    background: linear-gradient(135deg, #6b46c1 0%, #3b82f6 100%);
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.chart-container {
+    height: 250px;
+    position: relative;
+}
+
+.results-column {
+    min-height: 400px;
+}
+
+/* Estilos para mobile */
+@media (max-width: 1023px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .results-column {
+        order: 3;
+        margin-top: 2rem;
+    }
+    
+    #results {
+        animation: slideDown 0.5s ease-out forwards;
+    }
+    
+    @keyframes slideDown {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+/* Mejoras de espaciado para mobile */
+@media (max-width: 640px) {
+    .flex-grow {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .container.mx-auto.px-4.py-8 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    #roiForm {
+        margin-top: 1rem;
+    }
+}
